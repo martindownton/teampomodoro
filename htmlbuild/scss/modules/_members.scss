@@ -1,0 +1,116 @@
+#teammembers {
+	/*
+	FlexBox FTW
+	*/
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+	.member {
+		border: 2px solid $grey-light;
+		float: left; /* Purely a fallback for non-flexbox browsers */
+		font-size: 16px;
+		margin: 10px;
+		overflow: hidden;
+		position: relative;
+		width: 250px;
+	}
+	.member.owner {
+		background-color: $green;
+		background-color: $grey-dark;
+		width: 524px;
+	}
+	.member.controls {
+		float: none;
+		margin: 15px auto;
+		width: 524px;
+	}
+
+.member h2 ,
+.member .statuscontainer {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.member .statuscontainer {
+	color: $grey-light;
+}
+.member .imgcontainer {
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+	width: 200px;
+}
+.member .timer {
+	font-family: inconsolata, courier new, monospace;
+	font-size: 80px;
+	text-align: center;
+}
+
+.member.owner:after {
+	background: $grey-light;
+	content: "You";
+	font-family: infinity, monospace;
+	font-size: 18px;
+	padding: 5px 80px;
+	position: absolute;
+	right: -60px;
+	top: 10px;
+		-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+}
+
+.timer {
+	color: $grey-light;
+}
+.controls {
+	color: $grey-light;
+	margin: 15px;
+}
+	.controls a {
+		color: $white;
+		font-size: 16px;
+	}
+
+/* Statuss */
+.member.busy {
+	.timer,
+	.status {
+		color: $red;
+	}
+}
+.member.complete,
+.member.completebreak {
+	.timer,
+	.status {
+		color: $white;
+	}
+	.timer {
+		margin: 10px 15px;
+		overflow: hidden;
+		position: relative;
+		/*
+		text-decoration: line-through;
+		*/
+	}
+	.timer:after {
+		$thickness: 5;
+		content: "testing";
+		border-bottom: #{$thickness}px solid $red;
+		height: 0px;
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		margin-top: -#{$thickness / 2}px;
+			-webkit-transform: rotate(10deg);
+		transform: rotate(10deg);
+	}
+}
+.member.break {
+	.timer,
+	.status {
+		color: $green;
+	}
+}

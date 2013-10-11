@@ -1,0 +1,12 @@
+#information {
+	margin: 20px 50px;
+}
+	#information .content {
+		-webkit-columns: 300px 3;
+		columns: 300px 3;
+	
+		p:first-child {
+			margin: 0 0 1em;
+			width: 300px;
+		}
+	}
