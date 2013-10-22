@@ -5,9 +5,8 @@
 <body>
 	{{> header}}
 
-	<section id="teammembers">
-		{{> member}}
-	</section>
+	{{> members}}
+	
 	{{> controls}}
 	{{> information}}
 	{{> footer}}
@@ -19,20 +18,24 @@
 	</header>
 </template>
 
-<template name="member">
-	<article class="member{{extraclass}}">
-		<h2>{{username}}}</h2>
-		<div class="imgcontainer">
-			<img alt="{{username}}" src="{{userimage}}" />
-		</div>
-		<div class="timer">{{time}}</div>
-		<p class="statuscontainer">Status: <span class="status">{{status}}</p>
-		<div class="controls">ctl:
-		{{#each controls}}
-			<a href="#{{action}}">{{content}}</a>
+<template name="members">
+	<section id="teammembers">
+		{{#each membercollection}}
+			<article class="member {{extraclass}}">
+				<h2>{{username}}}</h2>
+				<div class="imgcontainer">
+					<img alt="{{username}}" src="{{userimage}}" />
+				</div>
+				<div class="timer">{{time}}</div>
+				<p class="statuscontainer">Status: <span class="status">{{status}}</p>
+				<div class="controls">ctl:
+				{{#each controls}}
+					<a href="#{{action}}">{{content}}</a>
+				{{/each}}
+				</div>
+			</article>
 		{{/each}}
-		</div>
-	</article>
+	</section>
 </template>
 
 <template name="controls">
