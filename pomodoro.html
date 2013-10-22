@@ -1,13 +1,58 @@
 <head>
-  <title>pomodoro</title>
+  <title>Team Pomodoro</title>
 </head>
 
 <body>
-  {{> hello}}
+	{{> header}}
+
+	<section id="teammembers">
+		{{> member}}
+	</section>
+	{{> controls}}
+	{{> information}}
+	{{> footer}}
 </body>
+
+<template name="header">
+	<header>
+		<h1><span class="alttitle">Team</span> Pomodoro</h1>
+	</header>
+</template>
 
 <template name="hello">
   <h1>Hello World!</h1>
   {{greeting}}
   <input type="button" value="Click" />
+</template>
+
+<template name="member">
+	<article class="member">
+		<h2>Sterling</h2>
+		<div class="imgcontainer">
+			<img alt="Sterling" src="http://images1.wikia.nocookie.net/__cb20100221034242/archer/images/d/d5/Sterling.jpg" />
+		</div>
+		<div class="timer">25:00</div>
+		<p class="statuscontainer">Status: <span class="status">Waiting to Start</p>
+		<div class="controls">ctl:
+			<a href="#ctl_start">start pomodori</a>
+		</div>
+	</article>
+</template>
+
+<template name="controls">
+	<section class="member controls">
+		<h2>Controls</h2>
+		<ul>
+			<li><a href="#ctl_add_new_member">Add New Member</a></li>
+			<li><a href="#ctl_delete_member">Delete Member</a></li>
+			<li><a href="#ctl_reset_all_timers">Reset All Timers</a></li>
+			<li><a href="#ctl_edit_pomodori_lengths">Edit Pomodori Lengths</a></li>
+			<li><a href="#ctl_edit_status_names">Edit Status Names</a></li>
+			<li><a href="#ctl_edit_alarms">Edit Alarms</a></li>
+		</ul>
+	</section>
+</template>
+
+<template name="footer">
+	<footer>built by <a href="http://twitter.com/MartinDownton">@martindownton</a> &amp; <a href="http://twitter.com/PhilKershaw">@PhilKershaw</a> &amp;maybe <a href="http://twitter.com/TheRealBifter">@TheRealBifter</a></footer>
 </template>
