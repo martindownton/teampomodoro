@@ -38,7 +38,7 @@ Template.members.membercollection = function() {
 	members = [
 		{
 			username: 	"Sterling",
-			userimage: 	"http://images1.wikia.nocookie.net/__cb20100221034242/archer/images/d/d5/Sterling.jpg",
+			userimage: 	"sterling.jpg",
 			time: 		"25:00",
 			status: 	"Waiting to Start",
 			controls: 	[
@@ -48,7 +48,7 @@ Template.members.membercollection = function() {
 		},
 		{
 			username:	"Lana",
-			userimage:	"http://images4.wikia.nocookie.net/__cb20110213005818/archer/images/thumb/f/f3/Lana.png/250px-Lana.png",
+			userimage:	"lana.png",
 			time: 		"23:45",
 			status: 	"Busy Working Hard",
 			controls: 	[
@@ -58,7 +58,7 @@ Template.members.membercollection = function() {
 		},
 		{
 			username:	"Malory",
-			userimage:	"http://images3.wikia.nocookie.net/__cb20100418103125/archer/images/thumb/5/5d/Maloryarcher.jpg/233px-Maloryarcher.jpg",
+			userimage:	"maloryarcher.jpg",
 			time:		"25:00",
 			status:		"Finished Pomodori",
 			controls:	[
@@ -69,7 +69,7 @@ Template.members.membercollection = function() {
 		},
 		{
 			username:	"Cheryl",
-			userimage:	"http://images4.wikia.nocookie.net/__cb20110213005944/archer/images/thumb/b/b3/Cheryl.png/233px-Cheryl.png",
+			userimage:	"cheryl.png",
 			time:		"04:56",
 			status:		"On a Break",
 			controls:	[
@@ -79,7 +79,7 @@ Template.members.membercollection = function() {
 		},
 		{
 			username:	"Pam",
-			userimage:	"http://images2.wikia.nocookie.net/__cb20110213010123/archer/images/thumb/d/da/Pam.png/233px-Pam.png",
+			userimage:	"pam.png",
 			time:		"05:00",
 			status:		"Finished Break",
 			controls:	[
@@ -89,7 +89,7 @@ Template.members.membercollection = function() {
 		},
 		{
 			username:	"Krieger",
-			userimage:	"http://images3.wikia.nocookie.net/__cb20110213005457/archer/images/thumb/f/fc/Krieger.png/233px-Krieger.png",
+			userimage:	"krieger.png",
 			time:		"12:34",
 			status:		"Busy Working Hard",
 			controls:	[

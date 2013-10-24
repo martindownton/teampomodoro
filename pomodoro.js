@@ -84,10 +84,10 @@ if (Meteor.isClient) {
 	}
 
 	Template.controls.events({
-	'click a' : function (event) {
+	'click a#new_member' : function (event) {
 		// template data, if any, is available in 'this'
 			if (typeof console !== 'undefined')
-				console.log(event)
+				console.log(event.target.href)
 		}
 	});
 }
