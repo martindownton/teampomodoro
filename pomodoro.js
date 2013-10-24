@@ -1,3 +1,4 @@
+
 if (Meteor.isClient) {
 	/*
 	Template.hello.greeting = function () {
@@ -88,11 +89,5 @@ if (Meteor.isClient) {
 			if (typeof console !== 'undefined')
 				console.log(event)
 		}
-	});
-}
-
-if (Meteor.isServer) {
-	Meteor.startup(function () {
-		// code to run on server at startup
 	});
 }
