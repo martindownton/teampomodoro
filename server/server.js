@@ -30,7 +30,7 @@ Meteor.startup(function () {
 		},
 		{
 			username:	"Malory",
-			userimage:	"maloryarcher.jpg",
+			userimage:	"malory.jpg",
 			time:		"25:00",
 			status:		"Finished Pomodori",
 			controls:	[
