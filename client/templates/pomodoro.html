@@ -1,0 +1,37 @@
+<head>
+  <title>Team Pomodoro</title>
+</head>
+
+<body>
+	{{> header}}
+
+	{{> members}}
+	
+	{{> controls}}
+	{{> information}}
+	{{> footer}}
+</body>
+
+<template name="header">
+	<header>
+		<h1><span class="alttitle">Team</span> Pomodoro</h1>
+	</header>
+</template>
+
+<template name="controls">
+	<section class="member controls">
+		<h2>Controls</h2>
+		<ul>
+			<li><a id="new_member" href="#ctl_add_new_member">Add New Member</a></li>
+			<li><a href="#ctl_delete_member">Delete Member</a></li>
+			<li><a href="#ctl_reset_all_timers">Reset All Timers</a></li>
+			<li><a href="#ctl_edit_pomodori_lengths">Edit Pomodori Lengths</a></li>
+			<li><a href="#ctl_edit_status_names">Edit Status Names</a></li>
+			<li><a href="#ctl_edit_alarms">Edit Alarms</a></li>
+		</ul>
+	</section>
+</template>
+
+<template name="footer">
+	<footer>built by <a href="http://twitter.com/MartinDownton">@martindownton</a> &amp; <a href="http://twitter.com/PhilKershaw">@PhilKershaw</a> &amp;maybe <a href="http://twitter.com/TheRealBifter">@TheRealBifter</a></footer>
+</template>
