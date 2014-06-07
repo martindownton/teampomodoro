@@ -2,12 +2,12 @@
 	<section id="teammembers">
 		{{#each membercollection}}
 			<article class="member {{extraclass}}">
-				<h2>{{username}}}</h2>
+				<h2>{{username}}</h2>
 				<div class="imgcontainer">
 					<img alt="{{username}}" src="images/{{userimage}}" />
 				</div>
 				<div class="timer">{{time}}</div>
-				<p class="statuscontainer">Status: <span class="status">{{status}}</p>
+				<p class="statuscontainer">Status: <span class="status">{{status}}</span></p>
 				<div class="controls">ctl:
 				{{#each controls}}
 					<a href="#{{action}}">{{content}}</a>
