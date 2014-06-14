@@ -43,8 +43,8 @@ Template.members.membercollection = function() {
 
 Template.controls.events({
     'click a#new_member' : function (event) {
-	// template data, if any, is available in 'this'
-		if (typeof console !== 'undefined')
-			console.log(event.target.href)
+		event.preventDefault();
+		var add_member = UI.render(Template.add_member);
+		var insert_member = UI.insert(add_member, $('.modal')[0]);
 	}
 });
