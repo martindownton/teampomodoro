@@ -45,7 +45,7 @@ Template.controls.events({
     'click a#new_member' : function (event) {
 		event.preventDefault();
 		var add_member = UI.render(Template.add_member);
-		Modal.show();
+		Modal.show('Add New Member');
 		var insert_member = UI.insert(add_member, $('.modal .content')[0]);
 	}
 });
@@ -63,9 +63,11 @@ if (Meteor.isClient) {
 	Modal.init = function() {
 		Modal.el = $('.modal');
 		Modal.content = Modal.el.find('.content');
+		Modal.title = Modal.el.find('.title');
 	}
-	Modal.show = function() {
+	Modal.show = function(title) {
 		Modal.el.addClass('show');
+		Modal.title.html(title);
 	}
 	Modal.hide = function() {
 		Modal.el.removeClass('show');

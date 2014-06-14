@@ -308,8 +308,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 h1, h2 {
-  font-family: infinity, monospace;
+  font-family: 'Lato', monospace;
+  font-weight: 100;
   text-align: center; }
 
 h1 {
@@ -352,8 +357,7 @@ html {
 	*/
   color: #EEEEEE;
   height: 100%;
-  font-family: Courier, Helvetica, arial;
-  font-family: Tahoma; }
+  font-family: 'Lato', Courier, Helvetica, arial; }
 
 footer {
   font-size: 14px;
@@ -490,14 +494,21 @@ footer a {
   left: -100%;
   width: 100%;
   height: 100%;
+  -webkit-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  padding: 20px;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-transition: opacity 0.2s, left 0s 0.2s;
-  transition: opacity 0.2s, left 0s 0.2s; }
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.2s, left 0s 0.2s;
+  transition: opacity 0.2s, transform 0.2s, left 0s 0.2s; }
   .modal.show {
     left: 0%;
     opacity: 1;
-    -webkit-transition: opacity 0.2s, left 0s 0s;
-    transition: opacity 0.2s, left 0s 0s; }
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s, left 0s 0s;
+    transition: opacity 0.2s, transform 0.2s, left 0s 0s; }
   .modal .close {
     color: #FA3419;
     position: absolute;

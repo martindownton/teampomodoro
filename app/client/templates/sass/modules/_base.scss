@@ -1,6 +1,11 @@
+*, *:before, *:after {
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
 h1,
 h2 {
-	font-family: infinity, monospace;
+	font-family: 'Lato', monospace;
+	font-weight: 100;
 	text-align: center;
 }
 h1 {
@@ -39,8 +44,7 @@ html {
 	
 	color: $white;
 	height: 100%;
-	font-family: Courier, Helvetica, arial;
-	font-family: Tahoma;
+	font-family: 'Lato', Courier, Helvetica, arial;
 }
 
 footer {
