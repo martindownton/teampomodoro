@@ -8,6 +8,7 @@ $grey-light: #4C4D4F;
 $black: 	 #111111;
 $white: 	 #EEEEEE;
 
+@import "modules/normalize";
 @import "modules/base";
 @import "modules/members";
 @import "modules/info";

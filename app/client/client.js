@@ -45,6 +45,34 @@ Template.controls.events({
     'click a#new_member' : function (event) {
 		event.preventDefault();
 		var add_member = UI.render(Template.add_member);
-		var insert_member = UI.insert(add_member, $('.modal')[0]);
+		Modal.show();
+		var insert_member = UI.insert(add_member, $('.modal .content')[0]);
 	}
 });
+
+Template.modal.events({
+	'click .close' : function (event) {
+		event.preventDefault();
+		Modal.hide();
+	}
+});
+
+if (Meteor.isClient) {
+	Modal = new Meteor.Collection("modal");
+
+	Modal.init = function() {
+		Modal.el = $('.modal');
+		Modal.content = Modal.el.find('.content');
+	}
+	Modal.show = function() {
+		Modal.el.addClass('show');
+	}
+	Modal.hide = function() {
+		Modal.el.removeClass('show');
+		Modal.content.html('');
+	}
+
+	Meteor.startup(function () {
+		Modal.init();
+	});
+}
