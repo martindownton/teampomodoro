@@ -1,16 +1,15 @@
 /* Yeah Bitch, Variables */
 /* Truer Tomato green but... meep */
-h1,
-h2 {
+h1, h2 {
   font-family: infinity, monospace;
   text-align: center; }
 
 h1 {
-  color: #fa3419;
+  color: #FA3419;
   font-size: 50px; }
 
 h1 .alttitle {
-  color: #95e617; }
+  color: #95E617; }
 
 h2 {
   font-size: 40px;
@@ -22,28 +21,28 @@ a {
     text-decoration: underline; }
 
 em {
-  color: #fa3419;
+  color: #FA3419;
   font-style: normal; }
 
 strong {
-  color: #95e617; }
+  color: #95E617; }
 
 p {
   line-height: 1.3em; }
 
 html {
-  background: #2c2d2f;
+  background: #2C2D2F;
   /* Old browsers */
   /*
-  background: -moz-linear-gradient(top, #2c2d2f 0%, #777777 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c2d2f), color-stop(100%,#777777));
-  background: -webkit-linear-gradient(top, #2c2d2f 0%,#777777 100%);
-  background: -o-linear-gradient(top, #2c2d2f 0%,#777777 100%);
-  background: -ms-linear-gradient(top, #2c2d2f 0%,#777777 100%);
-  background: linear-gradient(to bottom, #2c2d2f 0%,#777777 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2d2f', endColorstr='#777777',GradientType=0 );
-  */
-  color: #eeeeee;
+	background: -moz-linear-gradient(top, #2c2d2f 0%, #777777 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c2d2f), color-stop(100%,#777777));
+	background: -webkit-linear-gradient(top, #2c2d2f 0%,#777777 100%);
+	background: -o-linear-gradient(top, #2c2d2f 0%,#777777 100%);
+	background: -ms-linear-gradient(top, #2c2d2f 0%,#777777 100%);
+	background: linear-gradient(to bottom, #2c2d2f 0%,#777777 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2d2f', endColorstr='#777777',GradientType=0 );
+	*/
+  color: #FC0;
   height: 100%;
   font-family: Courier, Helvetica, arial;
   font-family: Tahoma; }
@@ -54,18 +53,18 @@ footer {
   text-align: center; }
 
 footer a {
-  color: #4c4d4f; }
+  color: #4C4D4F; }
 
 #teammembers {
   /*
-  FlexBox FTW
-  */
+	FlexBox FTW
+	*/
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
 
 .member {
-  border: 2px solid #4c4d4f;
+  border: 2px solid #4C4D4F;
   float: left;
   /* Purely a fallback for non-flexbox browsers */
   font-size: 16px;
@@ -75,8 +74,8 @@ footer a {
   width: 250px; }
 
 .member.owner {
-  background-color: #95e617;
-  background-color: #1c1d1f;
+  background-color: #95E617;
+  background-color: #1C1D1F;
   width: 524px; }
 
 .member.controls {
@@ -84,13 +83,12 @@ footer a {
   margin: 15px auto;
   max-width: 524px; }
 
-.member h2,
-.member .statuscontainer {
+.member h2, .member .statuscontainer {
   margin-left: 15px;
   margin-right: 15px; }
 
 .member .statuscontainer {
-  color: #4c4d4f; }
+  color: #4C4D4F; }
 
 .member .imgcontainer {
   height: 200px;
@@ -105,7 +103,7 @@ footer a {
   text-align: center; }
 
 .member.owner:after {
-  background: #4c4d4f;
+  background: #4C4D4F;
   content: "You";
   font-family: infinity, monospace;
   font-size: 18px;
@@ -117,38 +115,32 @@ footer a {
   transform: rotate(30deg); }
 
 .timer {
-  color: #4c4d4f; }
+  color: #4C4D4F; }
 
 .controls {
-  color: #4c4d4f;
+  color: #4C4D4F;
   margin: 15px; }
 
 .controls a {
-  color: #eeeeee;
+  color: #FC0;
   font-size: 16px; }
 
 /* Statuss */
-.member.busy .timer,
-.member.busy .status {
-  color: #fa3419; }
+.member.busy .timer, .member.busy .status {
+  color: #FA3419; }
 
-.member.complete .timer,
-.member.complete .status,
-.member.completebreak .timer,
-.member.completebreak .status {
-  color: #eeeeee; }
-.member.complete .timer,
-.member.completebreak .timer {
+.member.complete .timer, .member.complete .status, .member.completebreak .timer, .member.completebreak .status {
+  color: #FC0; }
+.member.complete .timer, .member.completebreak .timer {
   margin: 10px 15px;
   overflow: hidden;
   position: relative;
   /*
-  text-decoration: line-through;
-  */ }
-.member.complete .timer:after,
-.member.completebreak .timer:after {
+		text-decoration: line-through;
+		*/ }
+.member.complete .timer:after, .member.completebreak .timer:after {
   content: "testing";
-  border-bottom: 5px solid #fa3419;
+  border-bottom: 5px solid #FA3419;
   height: 0px;
   overflow: hidden;
   display: block;
@@ -159,9 +151,8 @@ footer a {
   -webkit-transform: rotate(10deg);
   transform: rotate(10deg); }
 
-.member.break .timer,
-.member.break .status {
-  color: #95e617; }
+.member.break .timer, .member.break .status {
+  color: #95E617; }
 
 #information {
   margin: 20px 50px; }
