@@ -1,0 +1,29 @@
+{
+  "name": "TeamPomodoro",
+  "version": "0.0.0",
+  "description": "The Pomodoro technique for you team",
+  "main": "pomodoro.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.8.0",
+    "gulp-sass": "~0.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martindownton/teampomodoro.git"
+  },
+  "keywords": [
+    "Pomodoro",
+    "Team",
+    "Productivity",
+    "GTD"
+  ],
+  "author": "@martindownton, @PhilKershaw",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/martindownton/teampomodoro/issues"
+  }
+}
