@@ -7,8 +7,8 @@ $grey-dark:  #1C1D1F;
 $grey-light: #4C4D4F;
 $black: 	 #111111;
 $white: 	 #EEEEEE;
-$white: 	 #FC0;
 
 @import "modules/base";
 @import "modules/members";
 @import "modules/info";
+@import "modules/modal";
