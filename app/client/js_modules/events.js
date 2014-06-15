@@ -13,6 +13,15 @@ Template.controls.events({
 		var delete_member = UI.render(Template.delete_member);
 		Modal.show('Delete Member');
 		UI.insert(delete_member, $('.modal .content')[0]);
+	},
+    'click a#edit_settings' : function (event) {
+		event.preventDefault();
+		Template.settings.settingcollection = function() {
+			return Settings.find();
+		}
+		var settings = UI.render(Template.settings);
+		Modal.show('Settings');
+		UI.insert(settings, $('.modal .content')[0]);
 	}
 });
 
@@ -35,13 +44,25 @@ Template.add_member.events({
     }
 });
 
-Template.delete_member.events = {
+Template.delete_member.events({
 	'click .delete' : function (event) {
 		event.preventDefault();
 		Modal.hide();
 		Members.remove(this._id);
 	}
-}
+});
+
+Template.settings.events({
+	'submit': function (event, tmpl) {
+		event.preventDefault();
+		tmpl.findAll('input.setting').each(function(input) {
+			Settings.update($(this).attr('name'), {
+				$set: {value: $(this)[0].value}
+			});
+		});
+		Modal.hide();
+	}
+})
 
 Template.modal.events({
 	'click .close' : function (event) {

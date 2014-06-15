@@ -4,9 +4,25 @@ Meteor.publish("members", function() {
 });
 
 Meteor.startup(function () {
-    /* Temporary place holder member data */
     
+    if (Settings.find().count() === 0) {
+    	console.log('applying default settings');
+	    Settings.insert({
+	    	key:	'pomodori_length',
+	    	name:	'Pomodori Length',
+	    	value:	25
+	    });
+	    Settings.insert({
+	    	key:	'break_length',
+	    	name:	'Break Length',
+	    	value:	5
+	    });
+    } else {
+    	console.log('using existing settings');
+    }
+
     if (Members.find().count() === 0) {
+	    /* Temporary place holder member data */
         var members = [
         {
 			username: 	"Sterling",

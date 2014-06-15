@@ -1,0 +1,15 @@
+<template name="settings">
+	{{#if settingcollection.count}}
+		<form id="settings">
+			{{#each settingcollection}}
+				<p>
+					<label for="{{key}}">{{name}}:</label>
+					<input class="setting" id="{{key}}" name="{{_id}}" value="{{value}}" />
+				</p>
+			{{/each}}
+			<input type="submit" value="Save Settings" />
+		</form>
+	{{else}}
+		<p class="passive">No Settings Found</p>
+	{{/if}}
+</template>
