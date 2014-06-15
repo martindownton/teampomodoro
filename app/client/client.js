@@ -50,6 +50,23 @@ Template.controls.events({
 	}
 });
 
+Template.add_member.events = {
+	'submit': function (event, tmpl) {
+        event.preventDefault();
+		Modal.hide();
+		Members.insert({
+			username:	"Krieger",
+			userimage:	"krieger.png",
+			time:		"12:34",
+			status:		"Busy Working Hard",
+			controls:	[
+				{action: "ctl_alert", content: "alert me when complete"}
+			],
+			extraclass:	"busy"
+    	});
+    }
+}
+
 Template.modal.events({
 	'click .close' : function (event) {
 		event.preventDefault();
@@ -67,10 +84,12 @@ if (Meteor.isClient) {
 	}
 	Modal.show = function(title) {
 		Modal.el.addClass('show');
+		$('body').addClass('lb');
 		Modal.title.html(title);
 	}
 	Modal.hide = function() {
 		Modal.el.removeClass('show');
+		$('body').removeClass('lb');
 		Modal.content.html('');
 	}
 

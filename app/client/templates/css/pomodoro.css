@@ -1,5 +1,17 @@
-/* Yeah Bitch, Variables */
-/* Truer Tomato green but... meep */
+/*------------------------------------*\
+   
+   This file is generated using SASS
+   DO NOT EDIT MANUALLY,
+   DO NOT EDIT MANUALLY,
+   DO NOT EDIT MANUALLY,
+   DO NOT EDIT MANUALLY,
+   DO NOT EDIT MANUALLY,
+				  changes will be lost
+
+           You've Been Warned
+                  ಠ_ಠ
+
+\*------------------------------------*/
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -308,6 +320,29 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* Truer Tomato green but... meep */
+body:after {
+  content: 'XS';
+  /*
+		*/
+  /* Stick it where you like, however you like */
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  color: #FFF;
+  line-height: 0.9;
+  padding: 0.25rem; }
+  @media (min-width: 650px) {
+    body:after {
+      content: 'SM'; } }
+  @media (min-width: 1250px) {
+    body:after {
+      content: 'MD'; } }
+  @media (min-width: 1600px) {
+    body:after {
+      content: 'LG'; } }
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -515,3 +550,26 @@ footer a {
     top: 10px;
     right: 10px;
     font-size: 20px; }
+  @media (min-width: 650px) {
+    .modal {
+      padding: 50px; } }
+  .modal .content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+body.lb header, body.lb #teammembers, body.lb .controls, body.lb #information, body.lb footer {
+  -webkit-filter: blur(5px);
+  filter: blur(5px); }

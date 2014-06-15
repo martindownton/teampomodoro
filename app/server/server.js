@@ -59,6 +59,7 @@ Meteor.startup(function () {
 			],
 			extraclass:	"completebreak"
 		},
+		/*
 		{
 			username:	"Krieger",
 			userimage:	"krieger.png",
@@ -68,7 +69,9 @@ Meteor.startup(function () {
 				{action: "ctl_alert", content: "alert me when complete"}
 			],
 			extraclass:	"busy"
-		}];
+		}
+		*/
+		];
 		
 		for (var i = 0; i < members.length; i++) {
 		    Members.insert({
@@ -80,5 +83,8 @@ Meteor.startup(function () {
     			extraclass:	members[i].extraclass
         	});
 		}
+    	console.log('not-loaded')
+    } else {
+    	console.log('pre-loaded')
     }
 });
