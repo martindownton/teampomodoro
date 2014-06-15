@@ -10,7 +10,7 @@ Meteor.startup(function () {
         var members = [
         {
 			username: 	"Sterling",
-			userimage: 	"sterling.jpg",
+			userimage: 	"images/sterling.jpg",
 			time: 		"25:00",
 			status: 	"Waiting to Start",
 			controls: 	[
@@ -20,7 +20,7 @@ Meteor.startup(function () {
 		},
 		{
 			username:	"Lana",
-			userimage:	"lana.png",
+			userimage:	"images/lana.png",
 			time: 		"23:45",
 			status: 	"Busy Working Hard",
 			controls: 	[
@@ -30,7 +30,7 @@ Meteor.startup(function () {
 		},
 		{
 			username:	"Malory",
-			userimage:	"malory.jpg",
+			userimage:	"images/malory.jpg",
 			time:		"25:00",
 			status:		"Finished Pomodori",
 			controls:	[
@@ -41,7 +41,7 @@ Meteor.startup(function () {
 		},
 		{
 			username:	"Cheryl",
-			userimage:	"cheryl.png",
+			userimage:	"images/cheryl.png",
 			time:		"04:56",
 			status:		"On a Break",
 			controls:	[
@@ -51,7 +51,7 @@ Meteor.startup(function () {
 		},
 		{
 			username:	"Pam",
-			userimage:	"pam.png",
+			userimage:	"images/pam.png",
 			time:		"05:00",
 			status:		"Finished Break",
 			controls:	[

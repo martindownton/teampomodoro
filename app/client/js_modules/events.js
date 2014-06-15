@@ -19,9 +19,11 @@ Template.controls.events({
 Template.add_member.events({
 	'submit': function (event, tmpl) {
         event.preventDefault();
+		var email =	tmpl.find('[name="member_email"]').value;
+		var email_md5 =	CryptoJS.MD5(email).toString();
 		Members.insert({
 			username:	tmpl.find('[name="member_name"]').value,
-			userimage:	"krieger.png",
+			userimage:	"http://www.gravatar.com/avatar/" + email_md5,
 			time:		"25:00",
 			status:		"Waiting to Start",
 			controls:	[
