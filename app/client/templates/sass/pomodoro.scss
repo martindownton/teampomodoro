@@ -13,6 +13,9 @@
 @import "modules/members";
 @import "modules/info";
 @import "modules/modal";
+@if ($debug) {
+	@import "modules/debug";
+}
 
 body.lb {
 	header ,
