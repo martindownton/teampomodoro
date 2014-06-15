@@ -17,7 +17,9 @@ Template.controls.events({
     'click a#edit_settings' : function (event) {
 		event.preventDefault();
 		Template.settings.settingcollection = function() {
-			return Settings.find();
+			return Settings.find({editable:true}, {
+				sort: { isort : 1 }
+			});
 		}
 		var settings = UI.render(Template.settings);
 		Modal.show('Settings');

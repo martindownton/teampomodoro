@@ -3,7 +3,7 @@
 		<form id="settings">
 			{{#each settingcollection}}
 				<p>
-					<label for="{{key}}">{{name}}:</label>
+					<label for="{{key}}">{{name}}{{#if description}} <span class="description" title="{{description}}">(i)</span>{{/if}}:</label>
 					<input class="setting" id="{{key}}" name="{{_id}}" value="{{value}}" />
 				</p>
 			{{/each}}
