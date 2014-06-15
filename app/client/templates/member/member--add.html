@@ -1,8 +1,12 @@
 <template name="add_member">
 	<form id="add_member">
 		<p>
-			<input name="member_name" placeholder="member_name" />
-			<input name="member_email" placeholder="member_email" />
+			<label for="member_name">Name:</label>
+			<input id="member_name" name="member_name" />
+		</p>
+		<p>
+			<label for="member_email">Email:</label>
+			<input id="member_email" name="member_email" />
 		</p>
 		<input type="submit" value="Add Member" />
 	</form>
