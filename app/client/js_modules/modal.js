@@ -5,6 +5,12 @@ if (Meteor.isClient) {
 		Modal.el = $('.modal');
 		Modal.content = Modal.el.find('.content');
 		Modal.title = Modal.el.find('.title');
+
+		$('.modal').click(function() {
+			if ($(event.target).closest('div').is(this)) {
+				Modal.hide();
+			}
+		});
 	}
 	Modal.show = function(title) {
 		Modal.el.addClass('show');
