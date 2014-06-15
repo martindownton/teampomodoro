@@ -8,14 +8,25 @@ Meteor.startup(function () {
     if (Settings.find().count() === 0) {
     	console.log('applying default settings');
 	    Settings.insert({
-	    	key:	'pomodori_length',
-	    	name:	'Pomodori Length',
-	    	value:	25
+	    	key:			'pomodori_length',
+	    	name:			'Pomodori Length',
+	    	value:			25
 	    });
 	    Settings.insert({
-	    	key:	'break_length',
-	    	name:	'Break Length',
-	    	value:	5
+	    	key:			'break_length',
+	    	name:			'Break Length',
+	    	value:			5
+	    });
+	    Settings.insert({
+	    	key:			'cycles',
+	    	name:			'Cycles',
+	    	value:			4,
+	    	description:	'The number of cycles before a long break occurs'
+	    });
+	    Settings.insert({
+	    	key:			'break_length_long',
+	    	name:			'Long Break Length',
+	    	value:			15
 	    });
     } else {
     	console.log('using existing settings');
