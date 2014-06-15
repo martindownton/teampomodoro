@@ -19,17 +19,17 @@ Template.controls.events({
 Template.add_member.events({
 	'submit': function (event, tmpl) {
         event.preventDefault();
-		Modal.hide();
 		Members.insert({
-			username:	"Krieger",
+			username:	tmpl.find('[name="member_name"]').value,
 			userimage:	"krieger.png",
-			time:		"12:34",
-			status:		"Busy Working Hard",
+			time:		"25:00",
+			status:		"Waiting to Start",
 			controls:	[
-				{action: "ctl_alert", content: "alert me when complete"}
+				{action: "ctl_start_pomodori", content: "start pomodori"}
 			],
-			extraclass:	"busy"
+			extraclass:	""
     	});
+		Modal.hide();
     }
 });
 
