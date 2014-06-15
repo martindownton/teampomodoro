@@ -1,7 +1,7 @@
-Members = new Meteor.Collection("members");
+/* Pomodoro.js */
 
-Members.allow({
-	/* Define CRUD methods and data validations */
-	insert: function() {	return true;	},
-	remove: function() {	return true;	}
+Meteor.startup(function () {
+	if (Meteor.isClient) {
+		Modal.init();
+	}
 });

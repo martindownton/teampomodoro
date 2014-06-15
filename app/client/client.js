@@ -4,9 +4,3 @@ Meteor.subscribe("members");
 Template.members.membercollection = function() {
     return Members.find();
 }
-
-Meteor.startup(function () {
-	if (Meteor.isClient) {
-		Modal.init();
-	}
-});
