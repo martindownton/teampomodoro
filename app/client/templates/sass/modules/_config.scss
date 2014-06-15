@@ -21,32 +21,3 @@ $white: 	    #EEEEEE;
     @media (min-width: 1600px) { @content; }
   }
 }
-
-@if ($debug) {
-	body:after {
-		content: 'XS';
-	 
-		@include breakpoint(mqs) {
-			content: 'SM';
-		}
-	 
-		@include breakpoint(mqm) {
-			content: 'MD';
-		}
-	 
-		@include breakpoint(mql) {
-			content: 'LG';
-		}
-		/*
-		*/
-		
-		/* Stick it where you like, however you like */
-		position: fixed;
-		bottom: 0;
-		right: 0;
-		background-color: #000;
-		color: #FFF;
-		line-height: 0.9;
-		padding: 0.25rem;
-	}
-}

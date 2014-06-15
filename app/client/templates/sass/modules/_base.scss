@@ -19,6 +19,7 @@ h2 {
 }
 
 a {
+	color: $white;
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
@@ -28,6 +29,24 @@ em { color:$red; font-style:normal; }
 strong { color:$green; }
 p {
 	line-height: 1.3em;
+}
+
+ul {
+	color: $grey-light;
+
+	a {
+		display: block;
+		line-height: 1.8em;
+		padding-right: 20px;
+	}
+}
+
+input[type="submit"] {
+	background: 0;
+	color: $white;
+	font-weight: 100;
+	border: 2px solid $grey-light;
+	padding: 10px 25px;
 }
 
 html {
@@ -49,6 +68,7 @@ html {
 
 footer {
 	font-size: 14px;
+	font-weight: 100;
 	padding: 1em;
 	text-align: center;
 }
