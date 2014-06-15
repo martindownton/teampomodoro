@@ -1,0 +1,52 @@
+$debug:			true;
+
+$red:           #FA3419;
+$green:         #13BB3F; /* Truer Tomato green but... meep */
+$green:         #95E617;
+$grey:  	    rgba(44,45,47,1);
+$grey__opaque:  rgba(44,45,47,0.8);
+$grey-dark:     #1C1D1F;
+$grey-light:    #4C4D4F;
+$black: 	    #111111;
+$white: 	    #EEEEEE;
+
+@mixin breakpoint($point) {
+  @if $point == mqs {
+    @media (min-width: 650px)  { @content; }
+  }
+  @else if $point == mqm {
+    @media (min-width: 1250px) { @content; }
+  }
+  @else if $point == mql {
+    @media (min-width: 1600px) { @content; }
+  }
+}
+
+@if ($debug) {
+	body:after {
+		content: 'XS';
+	 
+		@include breakpoint(mqs) {
+			content: 'SM';
+		}
+	 
+		@include breakpoint(mqm) {
+			content: 'MD';
+		}
+	 
+		@include breakpoint(mql) {
+			content: 'LG';
+		}
+		/*
+		*/
+		
+		/* Stick it where you like, however you like */
+		position: fixed;
+		bottom: 0;
+		right: 0;
+		background-color: #000;
+		color: #FFF;
+		line-height: 0.9;
+		padding: 0.25rem;
+	}
+}
