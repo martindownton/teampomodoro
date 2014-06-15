@@ -1,0 +1,9 @@
+<template name="delete_member">
+	<ul>
+		{{#each membercollection}}
+			<li>
+				<a class="delete" id="{{_id}}" href="#ctl_member_delete">{{username}} ({{status}})</a>
+			</li>
+		{{/each}}
+	</ul>
+</template>

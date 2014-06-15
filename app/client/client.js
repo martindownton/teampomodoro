@@ -1,39 +1,3 @@
-	/*
-	Template.hello.greeting = function () {
-		return "Welcome to pomodoro.";
-	};
-
-	Template.hello.events({
-	'click input' : function () {
-		// template data, if any, is available in 'this'
-			if (typeof console !== 'undefined')
-				console.log("You pressed the button");
-		}
-	});
-
-	Template.member.username = function() {
-		return "!Sterling!";
-	}
-	Template.member.userimage = function() {
-		return "http://images1.wikia.nocookie.net/__cb20100221034242/archer/images/d/d5/Sterling.jpg"
-	};
-	Template.member.time = function() {
-		return "25:00"
-	};
-	Template.member.status = function() {
-		return "Waiting to Start"
-	};
-	Template.member.controls = function() {
-		return [
-			{action: "ctl_start_break", content: "start break"},
-			{action: "ctl_exit", content: "exit"}
-		]
-	};
-	Template.member.extraclass = function() {
-		return " break owner"
-	};
-	*/
-	
 /* Subscribe to the data model published by the server */
 Meteor.subscribe("members");
 
@@ -46,11 +10,20 @@ Template.controls.events({
 		event.preventDefault();
 		var add_member = UI.render(Template.add_member);
 		Modal.show('Add New Member');
-		var insert_member = UI.insert(add_member, $('.modal .content')[0]);
+		UI.insert(add_member, $('.modal .content')[0]);
+	},
+    'click a#delete_member' : function (event) {
+		event.preventDefault();
+		Template.delete_member.membercollection = function() {
+			return Members.find();
+		}
+		var delete_member = UI.render(Template.delete_member);
+		Modal.show('Delete Member');
+		UI.insert(delete_member, $('.modal .content')[0]);
 	}
 });
 
-Template.add_member.events = {
+Template.add_member.events({
 	'submit': function (event, tmpl) {
         event.preventDefault();
 		Modal.hide();
@@ -65,6 +38,14 @@ Template.add_member.events = {
 			extraclass:	"busy"
     	});
     }
+});
+
+Template.delete_member.events = {
+	'click .delete' : function (event, mbr, mbr2) {
+		event.preventDefault();
+		Modal.hide();
+		Members.remove(this._id);
+	}
 }
 
 Template.modal.events({
