@@ -29,7 +29,8 @@
 		position: absolute;
 		top: 10px;
 		right: 10px;
-		font-size: 20px;
+		font-size: 30px;
+		font-weight: 100;
 	}
 
 	@include breakpoint(mqs) {
@@ -42,5 +43,17 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
+	}
+
+	form {
+		text-align: left;
+
+		label {
+			float: left;
+			min-width: 150px;
+		}
+		input[type="submit"] {
+			float: right;
+		}
 	}
 }
