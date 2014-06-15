@@ -1,9 +1,13 @@
 <template name="delete_member">
-	<ul>
-		{{#each membercollection}}
-			<li>
-				<a class="delete" id="{{_id}}" href="#ctl_member_delete">{{username}} ({{status}})</a>
-			</li>
-		{{/each}}
-	</ul>
+	{{#if membercollection.count}}
+		<ul>
+			{{#each membercollection}}
+				<li>
+					<a class="delete" id="{{_id}}" href="#ctl_member_delete">{{username}} ({{status}})</a>
+				</li>
+			{{/each}}
+		</ul>
+	{{else}}
+		<p class="passive">No Team Members</p>
+	{{/if}}
 </template>
