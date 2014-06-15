@@ -23,7 +23,7 @@ Template.add_member.events({
 		var email_md5 =	CryptoJS.MD5(email).toString();
 		Members.insert({
 			username:	tmpl.find('[name="member_name"]').value,
-			userimage:	"http://www.gravatar.com/avatar/" + email_md5 + '?s=250',
+			userimage:	"http://www.gravatar.com/avatar/" + email_md5 + '?s=200',
 			time:		"25:00",
 			status:		"Waiting to Start",
 			controls:	[
