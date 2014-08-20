@@ -6,7 +6,7 @@ if (Meteor.isClient) {
 		Modal.content = Modal.el.find('.content');
 		Modal.title = Modal.el.find('.title');
 
-		$('.modal').click(function() {
+		$('.modal').click(function(event) {
 			if ($(event.target).closest('div').is(this)) {
 				Modal.hide();
 			}
