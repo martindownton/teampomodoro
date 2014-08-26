@@ -6,4 +6,4 @@
 standard-app-packages
 autopublish
 insecure
-crypto-md5
+tmeasday:crypto-md5@3.1.2
